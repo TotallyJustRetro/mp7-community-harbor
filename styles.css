@@ -1,13 +1,4 @@
 
-/* Self-hosted OFL display font: Lilita One by Juan Montoreano. */
-@font-face{
-  font-family:"Lilita One";
-  src:url("assets/fonts/LilitaOne-Regular.ttf") format("truetype");
-  font-style:normal;
-  font-weight:400;
-  font-display:swap;
-}
-
 :root{--navy:#092d49;--navy2:#124a65;--blue:#167f9c;--aqua:#5fe0d0;--mint:#d9faf1;--gold:#ffdc68;--coral:#ff786e;--cream:#fff9eb;--ink:#17354b;--muted:#627d8c;--line:#dbe9e8;--paper:#fff;--shadow:0 18px 48px rgba(5,39,62,.14);font-family:"Nunito",system-ui,sans-serif;color:var(--ink);scroll-behavior:smooth}
 *{box-sizing:border-box}body{margin:0;background:#f3fbf9;color:var(--ink);overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}.shell{width:min(1160px,calc(100% - 40px));margin-inline:auto}.top-ribbon{background:#072940;color:#d8fff7;text-align:center;padding:9px 12px;font-size:11px;font-weight:900;letter-spacing:2px}.sparkle{color:var(--gold);padding:0 12px}.ribbon-dot{color:var(--coral);padding:0 8px}
 .site-header{height:82px;padding:0 max(20px,calc((100% - 1160px)/2));display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(9,45,73,.08);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}.brand-mark{display:grid;place-items:center;width:49px;height:49px;border-radius:16px;background:linear-gradient(145deg,#1a9bb1,#0d597a);box-shadow:0 5px 0 #073c5a;transform:rotate(-5deg)}.brand-mark svg{width:39px}.brand-copy{display:grid;line-height:1}.brand-copy strong{font-family:"Baloo 2",sans-serif;font-size:21px;letter-spacing:.2px;color:var(--navy)}.brand-copy em{font-style:normal;color:#e66d62}.brand-copy small{font-size:9px;letter-spacing:2.2px;font-weight:900;color:#548093;margin-top:4px}.main-nav{display:flex;align-items:center;gap:25px;margin:auto}.nav-link{font-size:13px;font-weight:900;color:#567181;padding:10px 0;position:relative}.nav-link:hover,.nav-link.active{color:#087e91}.nav-link.active:after{content:"";position:absolute;height:3px;border-radius:4px;background:var(--coral);bottom:1px;left:0;right:0}.header-actions{display:flex;gap:9px}.btn{border:0;border-radius:12px;padding:11px 17px;font-size:12px;font-weight:900;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.18s ease;white-space:nowrap}.btn:hover{transform:translateY(-2px);filter:brightness(1.03)}.btn-ghost{background:#edf8f6;color:#236477}.btn-gold{background:var(--gold);color:#493c18;box-shadow:0 4px 0 #dbb84c}.btn-coral{background:var(--coral);color:white;box-shadow:0 4px 0 #d85d59}.btn-outline{background:rgba(255,255,255,.11);border:1.5px solid rgba(255,255,255,.7);color:white}.btn-outline-dark{background:white;border:1.5px solid #c9dddd;color:#24536a}.btn-large{padding:14px 20px;border-radius:14px;font-size:13px}.mobile-menu{display:none;border:0;background:#e9f7f4;border-radius:10px;padding:9px 12px;color:var(--navy);font-size:20px}.backend-notice{margin-top:17px;background:#fff6d9;border:1px solid #f3df9c;padding:11px 15px;border-radius:11px;color:#6c591f;font-size:12px}.backend-notice strong{color:#4a3a11}
@@ -172,7 +163,7 @@ body{background:#f7f2df;background-image:radial-gradient(rgba(28,126,140,.07) 1p
 .newsletter h2,
 .panel-head h3,
 .modal h2 {
-  font-family:"Lilita One","Baloo 2",system-ui,sans-serif;
+  font-family:"Mario Party Hudson",system-ui,sans-serif;
   font-weight:400;
   letter-spacing:.015em;
   text-transform:uppercase;
@@ -191,7 +182,7 @@ body{background:#f7f2df;background-image:radial-gradient(rgba(28,126,140,.07) 1p
 .section-heading h2 span,.maker-copy h2 span {color:#ed705f}
 .thumb-title {font-size:25px;line-height:1.02}
 .mini-art strong,.mini-info h3 {
-  font-family:"Lilita One","Baloo 2",system-ui,sans-serif;
+  font-family:"Mario Party Hudson",system-ui,sans-serif;
   font-weight:400;
   letter-spacing:.015em;
   text-transform:uppercase;
@@ -220,7 +211,8 @@ body{background:#f7f2df;background-image:radial-gradient(rgba(28,126,140,.07) 1p
   .hero-lede {font-size:13px}
 }
 
-/* Actual Mario Party Hudson font supplied for this project. */
+
+/* Exact user-supplied Mario Party Hudson TTF. */
 @font-face{
   font-family:"Mario Party Hudson";
   src:url("assets/fonts/Mario-Party-Hudson-Font.ttf") format("truetype");
