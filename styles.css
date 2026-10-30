@@ -124,44 +124,30 @@ body{background:#f7f2df;background-image:radial-gradient(rgba(28,126,140,.07) 1p
 .mini-info small a{font-size:9px}
 @media(max-width:720px){.image-credit-line{text-align:left}.board-count{order:2}.hero-credit{bottom:11px}}
 
-/* Mario Party 7 character-sheet lettering. The glyphs stay real HTML text
-   for accessible labels, while the visual letters use the extracted atlas. */
-.mp7-font-main,.mp7-font-mini{
-  text-transform:uppercase;
-  letter-spacing:0;
-  font-family:"Baloo 2",system-ui,sans-serif;
-}
-.mp7-glyph{
-  display:inline-block;
-  flex:none;
-  background-repeat:no-repeat;
-  background-origin:border-box;
-  overflow:hidden;
-  vertical-align:-.055em;
-}
-.mp7-font-main .mp7-glyph{
-  filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff) drop-shadow(1.5px 2px 0 rgba(57,57,57,.95));
-}
-.mp7-font-mini .mp7-glyph{
-  filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff) drop-shadow(1.5px 2px 0 rgba(0,0,0,.9));
-}
-.mp7-space{display:inline-block;width:.32em}
-.mp7-font-fallback{
-  display:inline-block;
-  color:#ff7300;
-  -webkit-text-stroke:.7px #fff;
-  text-shadow:1.5px 2px 0 rgba(57,57,57,.95);
+
+/* Original party-game display treatment, using licensed Baloo 2 lettering. */
+.hero h1,.section-heading h2,.maker-copy h2,.thumb-title,
+.card-body h3,.mod-info h3,.creator-panel h3,.newsletter h2,
+.panel-head h3,.modal h2,.brand-copy strong{
   font-family:"Baloo 2",system-ui,sans-serif;
   font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.025em;
+  -webkit-text-stroke:.7px rgba(255,255,255,.92);
+  paint-order:stroke fill;
+  text-shadow:1.5px 2px 0 rgba(57,57,57,.72);
 }
-.mp7-font-mini .mp7-font-fallback{
+.hero h1,.thumb-title{color:#ff7300;-webkit-text-stroke:1.3px #fff;text-shadow:2px 3px 0 #393939}
+.mini-art strong,.mini-info h3{
+  font-family:"Baloo 2",system-ui,sans-serif;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.035em;
   color:#ef317b;
-  text-shadow:1.5px 2px 0 rgba(0,0,0,.9);
+  -webkit-text-stroke:1.2px #fff;
+  paint-order:stroke fill;
+  text-shadow:2px 3px 0 rgba(0,0,0,.82);
 }
-.mp7-font-ready .mp7-font-main,.mp7-font-ready .mp7-font-mini{line-height:1.15}
-.typeface-credit{display:block;margin-top:7px;color:#88aeb4;font-size:8px;line-height:1.5}
 @media(max-width:720px){
-  .hero h1.mp7-font-main{font-size:46px}
-  .section-heading h2.mp7-font-main{letter-spacing:0}
-  .typeface-credit{font-size:8px}
+  .hero h1{font-size:46px}
 }
