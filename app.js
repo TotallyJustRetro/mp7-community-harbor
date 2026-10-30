@@ -38,9 +38,9 @@
     ]);
 
     const decorate = (selector, atlas, className) => {
-      $(selector).forEach(element => {
+      Array.from(document.querySelectorAll(selector)).forEach(element => {
         if (element.dataset.mp7SpriteReady === "true") return;
-        const accessibleText = element.textContent.replace(/\\s+/g," ").trim();
+        const accessibleText = element.textContent.replace(/\s+/g," ").trim();
         if (!accessibleText) return;
         element.setAttribute("aria-label",accessibleText);
         element.classList.add(className);
@@ -55,7 +55,7 @@
           const fontSize = parseFloat(getComputedStyle(element).fontSize) || 24;
           const scale = fontSize / 240;
           for (const character of node.nodeValue) {
-            if (character === " " || character === "\\u00a0") {
+            if (character === " " || character === "\u00a0") {
               const spacer = document.createElement("span");
               spacer.className = "mp7-space";
               spacer.setAttribute("aria-hidden","true");
