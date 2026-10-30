@@ -336,3 +336,236 @@ body{background:#f7f2df;background-image:radial-gradient(rgba(28,126,140,.07) 1p
 @media(max-width:720px){
   .hero h1{font-size:clamp(45px,10vw,58px)}
 }
+
+/* --- Visual polish pass: vivid Hudson typography and livelier board cards --- */
+.hero h1.hero-title{
+  display:block;
+  margin:22px 0 18px;
+  padding:0;
+  font-family:"Mario Party Hudson",system-ui,sans-serif;
+  font-size:clamp(51px,5.3vw,69px);
+  font-weight:400;
+  line-height:1.14;
+  letter-spacing:0;
+  color:#ff7c16;
+  background:none;
+  -webkit-text-fill-color:initial;
+  -webkit-text-stroke:0;
+  text-shadow:none;
+  filter:none;
+}
+.hero-title-orange,
+.hero-title-coral,
+.hero-title-aqua{
+  display:inline-block;
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.96);
+  paint-order:stroke fill;
+  filter:drop-shadow(0 2px 0 rgba(50,53,48,.24));
+  text-shadow:none;
+}
+.hero-title-orange{
+  background-image:linear-gradient(180deg,#fff28a 0%,#ffd23f 22%,#ff8617 67%,#ee5316 100%);
+}
+.hero-title-coral{
+  background-image:linear-gradient(180deg,#ffc0a2 0%,#ff8876 42%,#ec4e67 100%);
+}
+.hero-title-aqua{
+  background-image:linear-gradient(180deg,#88f5dd 0%,#25d0c0 47%,#078fa8 100%);
+}
+
+.hero-lede{
+  color:#244e65;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.75;
+}
+.hero-note{
+  color:#137e7d;
+  font-size:10px;
+  letter-spacing:1.35px;
+}
+.hero .btn-coral{
+  background:linear-gradient(180deg,#ff987c 0%,#ff705e 54%,#ed554e 100%);
+  border:2px solid #fff0d7;
+  box-shadow:0 5px 0 #be4948,0 8px 16px rgba(154,69,47,.17);
+}
+.hero .btn-outline{
+  background:linear-gradient(180deg,#ffffff 0%,#e9fff7 100%);
+  border:2px solid #b5e5d8;
+  color:#075a73;
+  box-shadow:0 5px 0 #9bcfc2,0 8px 16px rgba(22,92,102,.1);
+}
+
+.section#boards{
+  position:relative;
+  isolation:isolate;
+  margin-top:48px;
+  padding:34px 30px 30px;
+  border:2px solid #f0d48a;
+  border-radius:25px;
+  background:
+    radial-gradient(circle at 5% 5%,rgba(255,218,105,.21),transparent 26%),
+    linear-gradient(135deg,#fffaf0 0%,#f1fff7 54%,#e4f8f3 100%);
+  box-shadow:0 7px 0 rgba(145,117,48,.14),0 18px 38px rgba(18,75,86,.07);
+}
+.section#boards .section-heading h2{
+  font-size:clamp(34px,3.5vw,45px);
+  color:#f47c23;
+  -webkit-text-fill-color:#f47c23;
+  -webkit-text-stroke:.55px #fff;
+  text-shadow:0 2px 0 rgba(173,84,23,.2);
+  filter:none;
+}
+.section#boards .section-heading h2 span{
+  color:#ef6370;
+  -webkit-text-fill-color:#ef6370;
+  background:none;
+  -webkit-background-clip:border-box;
+  -webkit-text-stroke:.55px #fff;
+}
+.section#boards .section-heading p{
+  color:#4c7480;
+  font-size:13px;
+}
+.section#boards .text-link{
+  color:#047f8c;
+  font-size:13px;
+}
+.section#boards .toolbar{
+  background:linear-gradient(110deg,#fff8df,#f1fff8);
+  border:2px solid #edce72;
+  box-shadow:0 5px 0 rgba(174,135,49,.14);
+  padding:12px;
+}
+.section#boards .search-box{
+  border:2px solid #bce5d9;
+  border-radius:12px;
+  box-shadow:inset 0 2px 3px rgba(12,75,82,.04);
+}
+.board-count{
+  background:linear-gradient(180deg,#fff2b9,#ffd86b);
+  border:2px solid #f4c44b;
+  color:#80500d;
+  box-shadow:0 3px 0 #d7a43e;
+}
+.creation-card{
+  position:relative;
+  overflow:hidden;
+  border:2px solid #ead8a0;
+  border-radius:19px;
+  background:linear-gradient(180deg,#fffef8 0%,#ffffff 100%);
+  box-shadow:0 6px 0 rgba(137,111,47,.15),0 14px 23px rgba(11,76,86,.08);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.creation-card::before{
+  content:"";
+  position:absolute;
+  z-index:4;
+  top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg,#19b9b0,#ffce54,#fa806a,#9b7ae5);
+}
+.creation-card:hover{
+  transform:translateY(-7px);
+  border-color:#e7c15b;
+  box-shadow:0 10px 0 rgba(137,111,47,.16),0 22px 32px rgba(11,76,86,.15);
+}
+.thumb{
+  height:205px;
+  background:#0f718a;
+}
+.thumb-scene{
+  filter:saturate(1.22) contrast(1.07);
+  transition:transform .35s ease,filter .35s ease;
+}
+.creation-card:hover .thumb-scene{
+  transform:scale(1.035);
+  filter:saturate(1.32) contrast(1.08);
+}
+.thumb:after{
+  background:linear-gradient(180deg,rgba(5,42,61,.02) 28%,rgba(5,42,61,.12) 57%,rgba(5,42,61,.58) 100%);
+  opacity:1;
+}
+.thumb-label{
+  background:linear-gradient(180deg,#fff5ca,#ffdf8a);
+  border:1px solid #fff;
+  color:#6f4c1d;
+  box-shadow:0 3px 0 rgba(123,83,24,.2);
+  border-radius:7px;
+  padding:7px 10px;
+  letter-spacing:.8px;
+}
+.thumb-title{
+  font-size:27px;
+  color:#fff;
+  background:none;
+  -webkit-background-clip:border-box;
+  -webkit-text-fill-color:#fff;
+  -webkit-text-stroke:.35px rgba(255,255,255,.85);
+  text-shadow:0 2px 0 #07506a,0 4px 0 rgba(2,38,52,.5);
+  filter:none;
+  letter-spacing:.01em;
+}
+.card-body{
+  padding:18px;
+}
+.card-kicker .creator{
+  color:#65818b;
+}
+.card-body h3{
+  margin:10px 0 6px;
+  color:#ed7522;
+  background:none;
+  -webkit-background-clip:border-box;
+  -webkit-text-fill-color:#ed7522;
+  -webkit-text-stroke:.25px #fff;
+  text-shadow:0 2px 0 rgba(178,95,27,.18);
+  filter:none;
+  font-size:24px;
+  line-height:1.12;
+  letter-spacing:0;
+}
+.card-body p{
+  color:#567684;
+  font-size:12px;
+  line-height:1.65;
+}
+.card-meta{
+  color:#7e979d;
+  border-top:1px solid #e7eadb;
+  border-bottom:1px solid #e7eadb;
+}
+.card-actions .btn-card{
+  background:linear-gradient(180deg,#f0fff9,#d3f5eb);
+  border:2px solid #b4e3d7;
+  box-shadow:0 4px 0 #8dcbbb;
+  color:#075d73;
+  font-weight:1000;
+}
+.card-actions .btn-card:hover{
+  background:linear-gradient(180deg,#fff3c7,#ffdf80);
+  border-color:#f1cc70;
+  color:#76501c;
+}
+.pill-aqua{
+  background:#d9fbf2;
+  color:#087e78;
+  border-color:#afe6d9;
+}
+.pill-coral{
+  background:#ffe0d9;
+  color:#c64d49;
+  border-color:#ffc0b4;
+}
+.image-credit-line{
+  color:#64818b;
+}
+
+@media(max-width:720px){
+  .section#boards{padding:25px 17px 20px;margin-top:35px}
+  .hero h1.hero-title{font-size:clamp(44px,10.5vw,57px);line-height:1.13}
+  .thumb{height:195px}
+}
