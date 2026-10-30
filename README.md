@@ -37,4 +37,4 @@ Before enabling public accounts or user uploads, the site operator should have a
 
 ## Display typography
 
-The site uses **Lilita One** by Juan Montoreano for display headings, loaded through Google Fonts. The family is distributed under the SIL Open Font License 1.1; see the [Google Fonts family metadata](https://github.com/google/fonts/blob/main/ofl/lilitaone/METADATA.pb) and [license file](https://github.com/google/fonts/blob/main/ofl/lilitaone/OFL.txt). Paragraph and interface copy continue to use Nunito for readability.
+The site self-hosts **Lilita One** by Juan Montoreano at `assets/fonts/LilitaOne-Regular.ttf` for display headings. The font and its SIL Open Font License 1.1 notice are stored in `assets/fonts/`. The font is loaded with a local `@font-face` rule instead of relying on a third-party font request. Paragraph and interface copy continue to use Nunito for readability. This is an independently licensed display font, not a conversion of Nintendo/Hudson's supplied Mario Party 7 lettering sheets.
