@@ -34,3 +34,7 @@ Before enabling public accounts or user uploads, the site operator should have a
 - Uploaded packages should be restricted to approved formats and size limits, scanned and validated server-side, and reviewed before publication.
 - This site is unofficial and is not affiliated with, endorsed by, or sponsored by Nintendo.
 - The Board Maker, online multiplayer, creator profiles, mods repository, and minigame downloads are roadmap concepts, not implemented services.
+
+## Display typography
+
+The site uses **Lilita One** by Juan Montoreano for display headings, loaded through Google Fonts. The family is distributed under the SIL Open Font License 1.1; see the [Google Fonts family metadata](https://github.com/google/fonts/blob/main/ofl/lilitaone/METADATA.pb) and [license file](https://github.com/google/fonts/blob/main/ofl/lilitaone/OFL.txt). Paragraph and interface copy continue to use Nunito for readability.
