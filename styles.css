@@ -569,3 +569,323 @@ body{background:#f7f2df;background-image:radial-gradient(rgba(28,126,140,.07) 1p
   .hero h1.hero-title{font-size:clamp(44px,10.5vw,57px);line-height:1.13}
   .thumb{height:195px}
 }
+
+
+/* ==========================================================
+   Tropical Cruise visual refresh
+   Background screenshot: Party Cruise, Super Mario Wiki.
+   ========================================================== */
+
+body{
+  position:relative;
+  isolation:isolate;
+  background:#f7efcf;
+  color:#173d53;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background-image:url("https://www.mariowiki.com/images/e/e7/PartyCruise_-_MarioParty7.png");
+  background-size:cover;
+  background-position:center 42%;
+  background-repeat:no-repeat;
+  opacity:.56;
+  filter:saturate(1.24) contrast(1.04);
+  transform:scale(1.015);
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 8% 15%,rgba(255,197,82,.20),transparent 23%),
+    radial-gradient(circle at 92% 18%,rgba(60,213,198,.17),transparent 25%),
+    radial-gradient(circle at 52% 88%,rgba(255,124,117,.16),transparent 30%),
+    linear-gradient(128deg,rgba(255,247,218,.66),rgba(226,251,238,.68) 48%,rgba(255,229,211,.66));
+}
+.site-header{
+  background:rgba(255,250,231,.96);
+  border-bottom:4px solid #f1ca62;
+  box-shadow:0 5px 20px rgba(11,66,80,.10);
+}
+.top-ribbon{
+  background:linear-gradient(90deg,#073951,#087e91 38%,#17628a 70%,#073951);
+  border-bottom:3px solid #ffd05b;
+}
+
+/* The home highlights get more color without sacrificing text contrast. */
+.quick-stats .stat-card{
+  border:2px solid #fff;
+  box-shadow:0 5px 0 rgba(18,82,91,.11),0 10px 22px rgba(18,82,91,.08);
+}
+.quick-stats .stat-card:nth-child(1){background:linear-gradient(135deg,#fff4ce,#ffe49d)}
+.quick-stats .stat-card:nth-child(2){background:linear-gradient(135deg,#ffe1d8,#ffc9bd)}
+.quick-stats .stat-card:nth-child(3){background:linear-gradient(135deg,#dcf9f1,#b9eee2)}
+.quick-stats .stat-card:nth-child(4){background:linear-gradient(135deg,#eee4ff,#d9d0ff)}
+
+/* MOD DOCK — a colorful creator space rather than three plain white tiles. */
+.section#mods{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  margin-top:48px;
+  padding:36px 30px 32px;
+  border:3px solid rgba(255,255,255,.94);
+  border-radius:27px;
+  background:
+    radial-gradient(circle at 2% 100%,rgba(255,202,104,.32),transparent 28%),
+    radial-gradient(circle at 96% 0%,rgba(70,209,199,.26),transparent 26%),
+    linear-gradient(125deg,#fff1d8 0%,#f5e8ff 48%,#ddfaf1 100%);
+  box-shadow:0 8px 0 rgba(11,70,83,.11),0 20px 42px rgba(11,70,83,.10);
+}
+.section#mods::before{
+  content:"✦   ✧       ✦       ✧";
+  position:absolute;
+  top:15px;
+  right:28px;
+  z-index:-1;
+  color:rgba(239,164,56,.45);
+  font-size:34px;
+  letter-spacing:15px;
+  transform:rotate(-9deg);
+  pointer-events:none;
+}
+.section#mods .section-heading h2{
+  font-family:"Mario Party Hudson",system-ui,sans-serif;
+  font-size:clamp(32px,3.5vw,43px);
+  color:#ee7a20;
+  -webkit-text-fill-color:#ee7a20;
+  -webkit-text-stroke:.5px rgba(255,255,255,.95);
+  text-shadow:0 2px 0 rgba(161,85,25,.20);
+  filter:none;
+}
+.section#mods .section-heading h2 span{
+  color:#f06473;
+  -webkit-text-fill-color:#f06473;
+  -webkit-text-stroke:.5px white;
+}
+.section#mods .section-heading p{color:#456d7a}
+.mod-grid{gap:18px}
+.mod-card{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:190px;
+  padding:20px 18px;
+  border:2px solid rgba(255,255,255,.97);
+  border-radius:19px;
+  box-shadow:0 6px 0 rgba(16,73,85,.12),0 14px 25px rgba(16,73,85,.08);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.mod-card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:7px;
+  z-index:-1;
+  background:linear-gradient(90deg,#ffcf5b,#ff806c,#9b7de5,#4fc9bf);
+}
+.mod-card::after{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  right:-62px;
+  bottom:-78px;
+  z-index:-1;
+  background:rgba(255,255,255,.35);
+}
+.mod-card:nth-child(1){background:linear-gradient(135deg,#f1e8ff,#dedaff 58%,#cfc9ff)}
+.mod-card:nth-child(2){background:linear-gradient(135deg,#fff0df,#ffd9ce 58%,#ffc6b9)}
+.mod-card:nth-child(3){background:linear-gradient(135deg,#e1fbf6,#c9f3ed 58%,#abe7df)}
+.mod-card:hover{
+  transform:translateY(-6px) rotate(-.35deg);
+  box-shadow:0 10px 0 rgba(16,73,85,.12),0 21px 32px rgba(16,73,85,.14);
+}
+.mod-icon{
+  flex-basis:58px;
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  border:3px solid rgba(255,255,255,.9);
+  box-shadow:0 5px 0 rgba(39,54,95,.12);
+  font-size:31px;
+}
+.mod-character{background:linear-gradient(145deg,#d9c7ff,#a78ce9);color:#5738a5}
+.mod-event{background:linear-gradient(145deg,#ffd0c4,#ff9c88);color:#ae453f}
+.mod-audio{background:linear-gradient(145deg,#c9fff0,#70d9cd);color:#087d83}
+.mod-info{padding-top:2px}
+.mod-topline .pill{border:1px solid rgba(255,255,255,.9);box-shadow:0 2px 0 rgba(17,72,82,.08)}
+.mod-version{color:#587783;font-weight:900}
+.mod-info h3{
+  display:inline-block;
+  margin:10px 0 5px;
+  font-family:"Mario Party Hudson",system-ui,sans-serif;
+  font-size:21px;
+  line-height:1.08;
+  letter-spacing:0;
+  color:#f27b20;
+  background:none;
+  -webkit-background-clip:border-box;
+  -webkit-text-fill-color:#f27b20;
+  -webkit-text-stroke:.35px rgba(255,255,255,.85);
+  text-shadow:0 2px 0 rgba(127,73,25,.18);
+  filter:none;
+}
+.mod-card:nth-child(2) .mod-info h3{color:#e85c67;-webkit-text-fill-color:#e85c67}
+.mod-card:nth-child(3) .mod-info h3{color:#078f91;-webkit-text-fill-color:#078f91}
+.mod-info p{
+  color:#375f70;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.6;
+  min-height:55px;
+}
+.mod-bottom{
+  color:#416b78;
+  font-size:10px;
+  font-weight:800;
+  margin-top:13px;
+}
+.mod-bottom .small-link{
+  color:#076f83;
+  background:rgba(255,255,255,.58);
+  border:1px solid rgba(255,255,255,.95);
+  border-radius:20px;
+  padding:7px 11px;
+}
+.mod-bottom .small-link:hover{background:#fff2bb;color:#7c4a12}
+
+/* Minigame cruise: deep sea blue with vivid coral, lime and aqua highlights. */
+.minigame-section{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  margin-top:68px;
+  background:
+    radial-gradient(circle at 8% 30%,rgba(255,214,105,.22),transparent 20%),
+    radial-gradient(circle at 87% 15%,rgba(255,128,114,.22),transparent 23%),
+    linear-gradient(125deg,#075b80 0%,#078c9a 48%,#3b73b2 100%);
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-image:linear-gradient(90deg,#ffd45f,#ff8b76,#73d9c8,#8b8ce6) 1;
+}
+.minigame-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  opacity:.30;
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.8) 1.4px,transparent 1.8px),
+    radial-gradient(circle,rgba(255,221,120,.85) 2px,transparent 2.5px);
+  background-size:39px 39px,73px 73px;
+  background-position:2px 5px,20px 27px;
+  pointer-events:none;
+}
+.minigame-section .shell{position:relative;z-index:1}
+.minigame-section .section-heading h2{
+  font-family:"Mario Party Hudson",system-ui,sans-serif;
+  color:#fff1a9;
+  -webkit-text-fill-color:#fff1a9;
+  -webkit-text-stroke:.55px rgba(255,255,255,.95);
+  text-shadow:0 3px 0 rgba(0,40,72,.38);
+  filter:none;
+}
+.minigame-section .section-heading h2 span{color:#ffc5a8;-webkit-text-fill-color:#ffc5a8}
+.minigame-section .section-heading p{color:#e1fffb;font-weight:700}
+.light-link{color:#fff2a6}
+.mini-card{
+  background:linear-gradient(150deg,rgba(255,255,255,.25),rgba(255,255,255,.09));
+  border:2px solid rgba(255,255,255,.52);
+  box-shadow:0 7px 0 rgba(0,38,61,.19),0 17px 27px rgba(0,38,61,.18);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.mini-card:hover{transform:translateY(-6px);box-shadow:0 11px 0 rgba(0,38,61,.20),0 24px 34px rgba(0,38,61,.20)}
+.mini-art{height:190px}
+.mini-info{background:rgba(4,55,78,.25)}
+.mini-info h3{
+  color:#fff4c7;
+  -webkit-text-fill-color:#fff4c7;
+  -webkit-text-stroke:.5px rgba(255,255,255,.9);
+  filter:none;
+}
+.mini-info small{color:#e0f9f6}
+.mini-info small a{color:#ffde8b}
+
+/* Warm and inviting crew deck. */
+.community-section{
+  position:relative;
+  isolation:isolate;
+  margin-top:48px;
+  padding:35px 30px 42px;
+  border:3px solid rgba(255,255,255,.95);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(255,182,150,.29),transparent 26%),
+    linear-gradient(130deg,#fff1d8 0%,#ffe2dc 48%,#eee6ff 100%);
+  box-shadow:0 8px 0 rgba(11,70,83,.10),0 19px 38px rgba(11,70,83,.08);
+}
+.community-section .section-heading h2{
+  color:#e96f31;
+  -webkit-text-fill-color:#e96f31;
+  -webkit-text-stroke:.5px white;
+  filter:none;
+  text-shadow:0 2px 0 rgba(140,65,31,.16);
+}
+.community-section .section-heading h2 span{color:#e65d76;-webkit-text-fill-color:#e65d76}
+.discussion-panel{
+  background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(255,249,231,.95));
+  border:2px solid #fff;
+  box-shadow:0 5px 0 rgba(173,111,58,.12);
+}
+.discussion-row:hover{background:rgba(255,218,136,.24);border-radius:12px}
+.creator-panel{
+  background:linear-gradient(145deg,#ffd98d 0%,#ffad87 58%,#fa8a83 100%);
+  border:2px solid rgba(255,255,255,.95);
+  box-shadow:0 5px 0 rgba(173,91,57,.18);
+}
+.creator-panel .eyebrow{color:#8f4d26}
+.creator-panel h3{color:#883d2b;text-shadow:0 2px 0 rgba(255,255,255,.5)}
+.creator-panel p{color:#704d41;font-weight:700}
+.creator-panel .btn-coral{box-shadow:0 4px 0 #b94c4b}
+.creator-doodle{color:rgba(255,255,255,.75);font-size:30px}
+
+/* Newsletter and footer finish the page like a colorful cruise destination. */
+.newsletter{
+  background:
+    radial-gradient(circle at 100% 0%,rgba(255,255,255,.34),transparent 25%),
+    linear-gradient(110deg,#bff4e7 0%,#d5f4ff 48%,#ffe3b8 100%);
+  border:3px solid #fff;
+  box-shadow:0 7px 0 rgba(9,81,98,.12),0 16px 28px rgba(9,81,98,.08);
+}
+.newsletter h2{
+  color:#087e91;
+  -webkit-text-fill-color:#087e91;
+  filter:none;
+}
+.newsletter p{color:#416f7c;font-weight:700}
+.newsletter-form input{border:2px solid #b4e0d5;box-shadow:inset 0 2px 4px rgba(7,70,86,.05)}
+.newsletter-form .btn-gold{border:2px solid #fff1c0;box-shadow:0 4px 0 #d69e34}
+.site-footer{
+  border-top:8px solid #ffd05b;
+  background:linear-gradient(110deg,#063752,#075e7a 52%,#0e8290);
+}
+.site-footer .footer-inner p a{color:#ffe08b;font-weight:900;text-decoration:underline;text-underline-offset:2px}
+
+@media(max-width:720px){
+  body::before{background-position:center top;opacity:.42}
+  .section#mods,.community-section{padding:26px 18px 24px;border-radius:20px}
+  .mod-grid{grid-template-columns:1fr}
+  .mod-card{min-height:0}
+  .minigame-section{margin-top:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  .creation-card,.mod-card,.mini-card{transition:none}
+}
