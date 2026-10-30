@@ -889,3 +889,8 @@ body::after{
 @media(prefers-reduced-motion:reduce){
   .creation-card,.mod-card,.mini-card{transition:none}
 }
+
+/* Keep the little harbor sparkles visible behind, not over, the mod cards. */
+.section#mods::before{z-index:0}
+.section#mods>.section-heading,
+.section#mods>.mod-grid{position:relative;z-index:1}
