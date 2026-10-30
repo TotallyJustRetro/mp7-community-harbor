@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#092d49" />
+  <meta name="description" content="An unofficial community hub concept for custom boards, mods, minigames, and creations inspired by Mario Party 7." />
+  <title>MP7 Community Harbor — Fan Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ocean-noise" aria-hidden="true"></div>
+  <div class="top-ribbon"><span class="sparkle">✦</span> FAN-MADE COMMUNITY HUB <span class="ribbon-dot">•</span> NOT AFFILIATED WITH NINTENDO <span class="sparkle">✦</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="MP7 Community Harbor home">
+      <span class="brand-mark"><svg viewBox="0 0 64 64" role="img" aria-label="Star over a wave"><path d="M32 4 39 22 58 23 43 35 48 54 32 43 16 54 21 35 6 23 25 22Z" fill="#ffdc68" stroke="#fff5c8" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 48c8-7 15-7 24 0s16 7 24 0v8H8Z" fill="#61e2d1" stroke="#e8fffb" stroke-width="2" stroke-linejoin="round"/><path d="M13 57c7-5 13-5 19 0s13 5 19 0" fill="none" stroke="#1e9db1" stroke-width="3" stroke-linecap="round"/></svg></span>
+      <span class="brand-copy"><strong>MP7 <em>COMMUNITY</em></strong><small>THE COMMUNITY HARBOR</small></span>
+    </a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#boards">Board Plaza</a>
+      <a class="nav-link" href="#mods">Mods</a>
+      <a class="nav-link" href="#minigames">Minigames</a>
+      <a class="nav-link" href="#community">Community</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-ghost" id="signInBtn">Sign in</button>
+      <button class="btn btn-gold" id="publishBtn"><span>＋</span> Publish</button>
+    </div>
+  </header>
+  <div class="backend-notice shell" id="backendNotice" role="status">
+    <strong>Harbor preview mode</strong> — these are sample listings. Connect the community backend to enable real accounts, moderated board uploads, and downloads.
+  </div>
+
+  <main id="home">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-star">✦</span> YOUR NEXT PARTY STARTS HERE</div>
+        <h1>MAKE WAVES.<br><span>MAKE YOUR</span> <i>OWN</i><br>ADVENTURE.</h1>
+        <p class="hero-lede">A fan-made harbor for custom boards, wild minigames, mods, and the people who create them.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-coral btn-large" href="#boards">Explore creations <span>→</span></a>
+          <a class="btn btn-outline btn-large" href="#board-maker">Meet the Board Maker</a>
+        </div>
+        <div class="hero-note"><span class="online-pulse"></span> THE COMMUNITY IS BUILDING SOMETHING BIG</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a cheerful cruise ship sailing across a bright ocean" role="img">
+        <div class="sunburst"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+        <div class="hero-sun">✦</div>
+        <div class="wave wave-back"></div><div class="wave wave-mid"></div><div class="wave wave-front"></div>
+        <div class="ship-shadow"></div>
+        <div class="ship"><div class="ship-upper"><span class="window-row">●　●　●　●　●</span><span class="flag">⚑</span></div><div class="ship-deck"></div><div class="ship-hull"><span class="porthole">●</span><span class="porthole">●</span><span class="porthole">●</span><span class="porthole">●</span><span class="porthole">●</span></div><div class="ship-bow"></div></div>
+        <div class="floating-star star-a">★</div><div class="floating-star star-b">✦</div><div class="floating-star star-c">★</div>
+        <div class="hero-sticker"><b>4–8</b><small>PLAYER<br>CREATIONS</small></div>
+        <div class="art-caption">ALL ABOARD, CREATORS!</div>
+      </div>
+      <div class="hero-wave-bottom"></div>
+    </section>
+
+    <section class="quick-stats shell" aria-label="Community features">
+      <div class="stat-card"><span class="stat-icon aqua">✦</span><div><strong>Custom boards</strong><small>Build a whole new route</small></div></div>
+      <div class="stat-card"><span class="stat-icon coral">⚙</span><div><strong>Mods & add-ons</strong><small>Make the game your own</small></div></div>
+      <div class="stat-card"><span class="stat-icon gold">♟</span><div><strong>4–8 player ideas</strong><small>More ways to play together</small></div></div>
+      <div class="stat-card"><span class="stat-icon purple">☁</span><div><strong>Made by the community</strong><small>Shared by fellow creators</small></div></div>
+    </section>
+
+    <section class="section shell" id="boards">
+      <div class="section-heading">
+        <div><div class="eyebrow dark-eyebrow">THE BOARD PLAZA</div><h2>Find your <span>next destination.</span></h2><p>Discover community-made boards, from cozy island loops to chaotic eight-player adventures.</p></div>
+        <a class="text-link" href="#all-boards">Browse all boards <span>→</span></a>
+      </div>
+      <div class="toolbar" id="all-boards">
+        <label class="search-box"><span>⌕</span><input id="boardSearch" type="search" placeholder="Search boards, creators, or tags…" aria-label="Search boards" /></label>
+        <div class="filter-group" aria-label="Filter boards by player count"><button class="filter-chip selected" data-player="all">All players</button><button class="filter-chip" data-player="4">4 players</button><button class="filter-chip" data-player="8">8 players</button></div>
+        <select id="boardSort" class="sort-select" aria-label="Sort boards"><option value="featured">Featured</option><option value="newest">Newest</option><option value="popular">Most downloaded</option></select>
+      </div>
+      <div class="card-grid board-grid" id="boardGrid">
+        <article class="creation-card" data-title="Coral Cove Circuit" data-creator="TideTurner" data-players="4" data-downloads="2480" data-date="2026-10-12" data-tags="island casual tropical"><div class="thumb thumb-coral"><span class="thumb-label">FEATURED BOARD</span><div class="island island-one"></div><div class="island island-two"></div><div class="route route-one"></div><span class="thumb-star">★</span><span class="thumb-title">CORAL COVE</span><span class="thumb-sub">CIRCUIT</span></div><div class="card-body"><div class="card-kicker"><span class="pill pill-aqua">4 PLAYERS</span><span class="creator">by <b>TideTurner</b></span></div><h3>Coral Cove Circuit</h3><p>A breezy island loop with secret shortcuts and a few splashy surprises.</p><div class="card-meta"><span>Sample concept listing</span><span>Preview only</span></div><div class="card-actions"><button class="btn btn-card board-details">View details</button><button class="icon-btn download-btn" aria-label="Download Coral Cove Circuit">↓</button></div></div></article>
+        <article class="creation-card" data-title="Starfall Summit" data-creator="PixelPilot" data-players="8" data-downloads="1930" data-date="2026-10-20" data-tags="mountain challenge 8-player"><div class="thumb thumb-summit"><span class="thumb-label">8-PLAYER READY</span><div class="mountain mountain-one"></div><div class="mountain mountain-two"></div><div class="summit-star">★</div><span class="thumb-title">STARFALL</span><span class="thumb-sub">SUMMIT</span></div><div class="card-body"><div class="card-kicker"><span class="pill pill-coral">8 PLAYERS</span><span class="creator">by <b>PixelPilot</b></span></div><h3>Starfall Summit</h3><p>Race across a sparkling mountaintop where every route has a twist.</p><div class="card-meta"><span>Sample concept listing</span><span>Preview only</span></div><div class="card-actions"><button class="btn btn-card board-details">View details</button><button class="icon-btn download-btn" aria-label="Download Starfall Summit">↓</button></div></div></article>
+        <article class="creation-card" data-title="Ghostlight Galleon" data-creator="MossyManta" data-players="4,8" data-downloads="875" data-date="2026-10-26" data-tags="spooky ship night 4-player 8-player"><div class="thumb thumb-ghost"><span class="thumb-label">NEW RELEASE</span><div class="moon"></div><div class="ghost-ship"><span>▥ ▥ ▥</span></div><span class="thumb-title">GHOSTLIGHT</span><span class="thumb-sub">GALLEON</span></div><div class="card-body"><div class="card-kicker"><span class="pill pill-purple">4 OR 8 PLAYERS</span><span class="creator">by <b>MossyManta</b></span></div><h3>Ghostlight Galleon</h3><p>Explore a haunted ship, dodge spooky events, and chase the phantom star.</p><div class="card-meta"><span>Sample concept listing</span><span>Preview only</span></div><div class="card-actions"><button class="btn btn-card board-details">View details</button><button class="icon-btn download-btn" aria-label="Download Ghostlight Galleon">↓</button></div></div></article>
+      </div>
+      <div class="empty-state" id="boardEmpty" hidden><span>🧭</span><b>No boards found</b><p>Try a different search or player filter.</p></div>
+    </section>
+
+    <section class="maker-banner shell" id="board-maker">
+      <div class="maker-art"><div class="maker-grid"></div><div class="maker-path"></div><span class="maker-pin pin-one">★</span><span class="maker-pin pin-two">✦</span><span class="maker-pin pin-three">●</span><div class="maker-pencil">✎</div></div>
+      <div class="maker-copy"><div class="eyebrow">YOUR ISLAND. YOUR RULES.</div><h2>Dream it. Draw it.<br><span>Play it.</span></h2><p>Meet the planned Board Maker: sketch paths, auto-place spaces, add events and custom assets, then test your creation before sharing it with everyone.</p><div class="maker-features"><span>✦ Draw paths</span><span>✦ Auto-place spaces</span><span>✦ Add events & NPCs</span></div><button class="btn btn-gold" id="makerInfoBtn">Explore the Board Maker <span>→</span></button><small class="prototype-note">FEATURE PREVIEW · CREATION TOOLS ARE IN DEVELOPMENT</small></div>
+    </section>
+
+    <section class="section shell" id="mods">
+      <div class="section-heading compact-heading"><div><div class="eyebrow dark-eyebrow">TUNE YOUR CRUISE</div><h2>Fresh from the <span>mod dock.</span></h2><p>Small tweaks, big shake-ups, and new ways to customize your game.</p></div><a class="text-link" href="#mods-list">Browse mods <span>→</span></a></div>
+      <div class="mod-grid" id="mods-list">
+        <article class="mod-card"><div class="mod-icon mod-character">♟</div><div class="mod-info"><div class="mod-topline"><span class="pill pill-purple">CHARACTERS</span><span class="mod-version">v1.2.0</span></div><h3>Extra Slot Framework</h3><p>API extension concept for registering additional character slots instead of replacing originals.</p><div class="mod-bottom"><span>by HarborLabs</span><button class="small-link mod-details">Details →</button></div></div></article>
+        <article class="mod-card"><div class="mod-icon mod-event">✧</div><div class="mod-info"><div class="mod-topline"><span class="pill pill-coral">BOARD EVENTS</span><span class="mod-version">v0.8.1</span></div><h3>Event Space Toolkit</h3><p>A creator-focused collection of reusable event hooks and board interactions.</p><div class="mod-bottom"><span>by StarboardDev</span><button class="small-link mod-details">Details →</button></div></div></article>
+        <article class="mod-card"><div class="mod-icon mod-audio">♫</div><div class="mod-info"><div class="mod-topline"><span class="pill pill-aqua">AUDIO</span><span class="mod-version">v1.0.3</span></div><h3>Oceanic Music Pack</h3><p>Original community-composed tracks for custom boards and menus.</p><div class="mod-bottom"><span>by BlueNote</span><button class="small-link mod-details">Details →</button></div></div></article>
+      </div>
+    </section>
+
+    <section class="minigame-section" id="minigames"><div class="shell section">
+      <div class="section-heading compact-heading"><div><div class="eyebrow">READY, SET, PLAY!</div><h2>Minigame <span>showcase.</span></h2><p>Community concepts made for quick matches, team chaos, and bigger groups.</p></div><a class="text-link light-link" href="#minigame-list">Explore minigames <span>→</span></a></div>
+      <div class="minigame-grid" id="minigame-list">
+        <article class="mini-card"><div class="mini-art mini-neon"><span class="mini-number">01</span><div class="neon-hoops">◎ ◎</div><strong>NEON<br>HOOPS</strong></div><div class="mini-info"><div><h3>Neon Hoops</h3><small>Team challenge · 4 players</small></div><span class="pill pill-aqua">4P</span></div></article>
+        <article class="mini-card"><div class="mini-art mini-tide"><span class="mini-number">02</span><div class="tide-wave">〰</div><strong>TIDAL<br>TANGLE</strong></div><div class="mini-info"><div><h3>Tidal Tangle</h3><small>Survival · 8 players</small></div><span class="pill pill-coral">8P</span></div></article>
+        <article class="mini-card"><div class="mini-art mini-cannon"><span class="mini-number">03</span><div class="cannonball">●</div><strong>CANNON<br>COURSE</strong></div><div class="mini-info"><div><h3>Cannon Course</h3><small>Race · 4 or 8 players</small></div><span class="pill pill-purple">4 / 8P</span></div></article>
+      </div>
+    </div></section>
+
+    <section class="section shell community-section" id="community">
+      <div class="section-heading compact-heading"><div><div class="eyebrow dark-eyebrow">THE CREW DECK</div><h2>Good ideas travel <span>together.</span></h2><p>Talk shop, find collaborators, share feedback, and show off what you're making.</p></div><a class="text-link" href="#discussions">Visit discussions <span>→</span></a></div>
+      <div class="community-grid" id="discussions">
+        <div class="discussion-panel"><div class="panel-head"><h3>Latest discussions</h3><span class="live-label"><i></i> SAMPLE DISCUSSIONS</span></div>
+          <a href="#discussion" class="discussion-row"><span class="discussion-avatar avatar-coral">TT</span><span class="discussion-text"><b>What makes a great 8-player board?</b><small>TideTurner · Board design</small></span><span class="discussion-replies">18 <small>replies</small></span></a>
+          <a href="#discussion" class="discussion-row"><span class="discussion-avatar avatar-aqua">PL</span><span class="discussion-text"><b>Looking for help testing a custom event</b><small>PixelLagoon · Help wanted</small></span><span class="discussion-replies">9 <small>replies</small></span></a>
+          <a href="#discussion" class="discussion-row"><span class="discussion-avatar avatar-purple">MM</span><span class="discussion-text"><b>Show us your Board Maker sketches!</b><small>MossyManta · Showcase</small></span><span class="discussion-replies">27 <small>replies</small></span></a>
+          <button class="btn btn-outline-dark" id="discussionBtn">Join the conversation <span>→</span></button>
+        </div>
+        <aside class="creator-panel"><div class="creator-badge">✦</div><div class="eyebrow">CREATORS WANTED</div><h3>Build something<br>unforgettable.</h3><p>Whether you're a board designer, model maker, musician, or minigame tinkerer, there's a spot for you on deck.</p><button class="btn btn-coral" id="creatorBtn">Share your work <span>→</span></button><div class="creator-doodle">✧　★　✧</div></aside>
+      </div>
+    </section>
+
+    <section class="newsletter shell"><div class="newsletter-star">✦</div><div><div class="eyebrow">HARBOR DISPATCH</div><h2>Keep up with the crew.</h2><p>Updates, new releases, and community highlights — all in one place.</p></div><form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="emailInput">Email address</label><input id="emailInput" type="email" placeholder="Your email address" required><button class="btn btn-gold" type="submit">Sign me up <span>→</span></button><small>Prototype only — newsletter delivery isn't connected.</small></form></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark small-mark">✦</span><span class="brand-copy"><strong>MP7 <em>COMMUNITY</em></strong><small>THE COMMUNITY HARBOR</small></span></a><p>An unofficial fan community concept. Not affiliated with or endorsed by Nintendo. Game names and related trademarks belong to their respective owners.</p><div class="footer-links"><a href="#boards">Boards</a><a href="#mods">Mods</a><a href="#community">Community</a><a href="community-guidelines.html">Guidelines</a><a href="privacy.html">Privacy</a><a href="#home">Back to top ↑</a></div></div></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">×</button>
+      <div class="modal-icon" id="modalIcon">✦</div>
+      <div class="eyebrow dark-eyebrow">COMMUNITY HARBOR</div>
+      <h2 id="modalTitle">Coming aboard?</h2>
+      <div id="modalContent"><p>This is a front-end community prototype.</p></div>
+      <div class="modal-actions" id="modalActions"><button class="btn btn-coral" id="modalOkay">Sounds good</button></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+  <script src="backend.js"></script>
+</body>
+</html>
