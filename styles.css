@@ -219,3 +219,128 @@ body{background:#f7f2df;background-image:radial-gradient(rgba(28,126,140,.07) 1p
   .hero h1 {font-size:clamp(42px,11vw,54px)}
   .hero-lede {font-size:13px}
 }
+
+/* Actual Mario Party Hudson font supplied for this project. */
+@font-face{
+  font-family:"Mario Party Hudson";
+  src:url("assets/fonts/Mario-Party-Hudson-Font.ttf") format("truetype");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+
+/* Main headings: Hudson lettering with bright party-style gradients. */
+.hero h1,
+.section-heading h2,
+.maker-copy h2,
+.thumb-title,
+.card-body h3,
+.mod-info h3,
+.creator-panel h3,
+.newsletter h2,
+.panel-head h3,
+.modal h2,
+.brand-copy strong{
+  font-family:"Mario Party Hudson",system-ui,sans-serif;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:0;
+  -webkit-text-stroke:1.5px #fff;
+  paint-order:stroke fill;
+  text-shadow:0 3px 0 rgba(43,48,50,.42);
+}
+
+/* Warm orange-gold gradient for the lead title. */
+.hero h1{
+  font-size:clamp(48px,5.1vw,66px);
+  line-height:1.08;
+  letter-spacing:0;
+  background-image:linear-gradient(180deg,#fff27b 0%,#ffc02d 38%,#f56d18 78%,#d94b18 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:#f58220;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:2px #fff;
+  paint-order:stroke fill;
+  filter:drop-shadow(0 4px 0 rgba(65,48,30,.52));
+}
+.hero h1 span{
+  display:inline-block;
+  background-image:linear-gradient(180deg,#ffb18b 0%,#ff796c 52%,#e94e61 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:#f27662;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:2px #fff;
+}
+.hero h1 i{
+  display:inline-block;
+  background-image:linear-gradient(180deg,#67e6d5 0%,#0fb6ae 55%,#087b9b 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:#0caaa4;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:2px #fff;
+}
+
+/* Consistent orange display lettering for community sections and board names. */
+.section-heading h2,
+.thumb-title,
+.card-body h3,
+.mod-info h3,
+.creator-panel h3,
+.panel-head h3,
+.modal h2,
+.brand-copy strong{
+  background-image:linear-gradient(180deg,#fff083 0%,#ffb32f 45%,#ed641d 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:#f58220;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:1.4px #fff;
+  filter:drop-shadow(0 3px 0 rgba(39,47,49,.44));
+}
+.section-heading h2 span{
+  display:inline-block;
+  background-image:linear-gradient(180deg,#ffb18b 0%,#ff796c 55%,#e94e61 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:#f27662;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:1.4px #fff;
+}
+.maker-copy h2{
+  color:#fff4bf;
+  -webkit-text-fill-color:#fff0b5;
+  -webkit-text-stroke:1.2px rgba(255,255,255,.95);
+  filter:drop-shadow(0 3px 0 rgba(0,0,0,.36));
+}
+.maker-copy h2 span{
+  color:#ffdc68;
+  -webkit-text-fill-color:#ffdc68;
+}
+.newsletter h2{
+  background-image:linear-gradient(180deg,#46cfc7,#087f91);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:#087f91;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:1.2px #fff;
+}
+.mini-art strong,.mini-info h3{
+  font-family:"Mario Party Hudson",system-ui,sans-serif;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:0;
+  background-image:linear-gradient(180deg,#ffb2d1 0%,#f15d9a 48%,#d52d79 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:#ef317b;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:1.5px #fff;
+  paint-order:stroke fill;
+  filter:drop-shadow(0 3px 0 rgba(0,0,0,.72));
+}
+@media(max-width:720px){
+  .hero h1{font-size:clamp(45px,10vw,58px)}
+}
