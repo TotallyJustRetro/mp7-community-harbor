@@ -46,8 +46,7 @@
     const sort = $("#boardSort").value;
     const grid = $("#boardGrid");
     const sorted = [...cards].sort((a,b) => {
-      if (sort === "newest") return b.dataset.date.localeCompare(a.dataset.date);
-      if (sort === "popular") return Number(b.dataset.downloads)-Number(a.dataset.downloads);
+      if (sort === "az") return a.dataset.title.localeCompare(b.dataset.title);
       return cards.indexOf(a)-cards.indexOf(b);
     });
     sorted.forEach(card => grid.appendChild(card));
@@ -64,21 +63,14 @@
   }
   $("#boardSearch").addEventListener("input", filterBoards);
   $("#boardSort").addEventListener("change", filterBoards);
-  $$(".filter-chip").forEach(button => button.addEventListener("click", () => {
-    $$(".filter-chip").forEach(chip => chip.classList.remove("selected"));
-    button.classList.add("selected");
-    activePlayer = button.dataset.player;
-    filterBoards();
-  }));
+  // The original Mario Party 7 board maps are all part of the four-player Party Cruise.
+
 
   cards.forEach(card => {
     $(".board-details", card).addEventListener("click", () => {
       openModal(card.dataset.title,
-        "Creator: "+card.dataset.creator+". Supported player count: "+card.dataset.players.replace(",", " or ")+". This is a sample listing for the website preview; board files and real creator profiles are not connected yet.",
+        card.dataset.description + " This is an original board from Mario Party 7; follow the Wiki link on the card for more background.",
         "🧭");
-    });
-    $(".download-btn", card).addEventListener("click", () => {
-      showToast("Board downloads will be available after the backend is connected.");
     });
   });
   $$(".mod-details").forEach(button => button.addEventListener("click", () => {
